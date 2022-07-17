@@ -1,0 +1,64 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_terminal: true
+configure_osx: true
+
+configure_sudoers: false
+# sudoers_custom_config: ''
+# Example:
+sudoers_custom_config: |
+  # Allow users in admin group to use sudo with no password.
+  liangyaran ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo_local_destination: ~/.dotfiles
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - bash-completion
+  - doxygen
+  - git
+  - go
+  - gpg
+  - sqlite
+  - ssh-copy-id
+  - readline
+  - openssl
+  - wget
+  - curl
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - vagrant
+
+apt_installed_packages:
+  # - ansible # Installed via Pip.
+  - bash-completion
+  - doxygen
+  - git
+  - go
+  - gpg
+  - sqlite
+  - openssl
+  - wget
+  - curl
+  - vagrant
+  - docker.io
+
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []

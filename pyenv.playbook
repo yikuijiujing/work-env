@@ -1,0 +1,14 @@
+- hosts: localhost
+  roles:
+     - role: avanov.pyenv
+       pyenv_env: "user"
+       pyenv_path: "{{ ansible_env.HOME }}/.pyenv"
+       pyenv_global: "3.7.13"
+       pyenv_update_git_install: no
+       pyenv_enable_autocompletion: no
+       pyenv_python_versions:
+         - "3.7.13"
+       pyenv_virtualenvs:
+         - venv_name: "pyenv_test"
+           py_version: "3.7.13"
+
